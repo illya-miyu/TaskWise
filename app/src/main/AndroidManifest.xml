@@ -13,10 +13,13 @@
         android:theme="@style/Theme.Bottomsheet"
         tools:targetApi="31">
         <activity
-            android:name=".SplashScreen"
+            android:name=".bottom_sheet_layout"
             android:exported="false" />
         <activity
-            android:name=".BottomNav"
+            android:name=".DropDown"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".Menu"
@@ -25,7 +28,7 @@
             android:name=".Register1"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

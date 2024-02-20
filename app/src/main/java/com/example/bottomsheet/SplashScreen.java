@@ -1,3 +1,5 @@
+package com.example.bottomsheet;
+
 // ... (imports and package statement)
 
 import android.app.ActivityOptions;
@@ -12,10 +14,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.bottomsheet.MainActivity;
-import com.example.bottomsheet.R;
-import com.example.bottomsheet.Register1;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -51,13 +49,9 @@ public class SplashScreen extends AppCompatActivity {
             Pair[] pairs = new Pair[2];
             pairs[0] = new Pair<>(image, "logo_image");
             pairs[1] = new Pair<>(logo, "logo_text");
-            // Wrap the call in API level 21 or higher
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this, pairs);
-                startActivity(intent, options.toBundle());
-            } else {
-                startActivity(intent);
-            }
+
+            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this, pairs);
+            startActivity(intent, options.toBundle());
         }, 3000); // Adjust the duration as needed (in milliseconds)
     }
 }

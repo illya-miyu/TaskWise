@@ -7,8 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start"
-    tools:context=".Menu">
+    tools:openDrawer="start">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -75,9 +74,5 @@
             app:layout_anchor="@id/bottomAppBar"
             app:maxImageSize="40dp"
             app:tint="@color/lavender" />
-
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
-
 </androidx.drawerlayout.widget.DrawerLayout>

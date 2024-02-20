@@ -18,8 +18,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -56,12 +54,12 @@ public class Menu extends AppCompatActivity implements NavigationView.OnNavigati
             int itemId = menuItem.getItemId();
             if (itemId == R.id.home) {
                 replaceFragment(new HomeFragment());
-            } else if (itemId == R.id.nav_month) {
-                replaceFragment(new MonthFragment());
             } else if (itemId == R.id.nav_clip) {
                 replaceFragment(new ClipFragment());
             } else if (itemId == R.id.nav_chat) {
                 replaceFragment(new ChatFragment());
+            } else if (itemId == R.id.nav_settings) {
+                replaceFragment(new SettingsFragment());
             }
             return true; // Add this line to indicate item selection handled
         });
